@@ -1,0 +1,49 @@
+﻿:root {
+    --txtmycolor: #104e8d;
+    --bgmycolor: #104e8d;
+    --crpfcolor: #BB9867;
+}
+.bgmycolor {
+    background: var(--bgmycolor)
+}
+
+.txtmycolor {
+    color: var(--txtmycolor)
+}
+
+.crpfcolor {
+    color: var(--crpfcolor)
+}
+
+h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Alexandria;
+    color: #104e8d;
+}
+
+h4 {
+    font-weight: bold;
+    font-family: Alexandria;
+    color: #104e8d;
+    font-size: 30px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.btn1 {
+    color: white;
+}
+
+.sptext {
+    font-size: 13px;
+}
+
+input,
+input::placeholder {
+    font-size: 13px;
+}
+

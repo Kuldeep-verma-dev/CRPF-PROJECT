@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "EmployeeManagement";
+    Layout = "~/Views/Shared/adminLayout.cshtml";
+}
+<link href="~/Content/assets/css/employeeManagement.css" rel="stylesheet" />
+<h2>Employee Management</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            @{
+                if (ViewBag.employees != null)
+                {
+                    if (ViewBag.employees.Rows.Count > 0)
+                    {
+                        <table class="table table-striped">
+                            <thead>
+                                <tr class="fm bg-dark">
+                                    <th class="text-light">Sr</th>
+                                    <th class="text-light">Quarter No./Type</th>
+                                    <th class="text-light">Name</th>
+                                    <th class="text-light">Mobile No.</th>
+                                    <th class="text-light">Force No.</th>
+                                    <th class="text-light">Rank</th>
+                                    <th class="text-light">Unit/Place Of Posting</th>
+                                    <th class="text-light">Date Of Quarter Aquisition</th>
+                                    <th class="text-light">Starting Meter Reading</th>
+                                    <th class="text-light">Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{ int i = 1; }
+                                @foreach (var row in ViewBag.employees.Rows)
+                                {
+
+                                    <tr>
+                                        <td>@i</td>
+                                        <td>@row[1]</td>
+                                        <td>@row[4]</td>
+                                        <td>@row[6]</td>
+                                        <td>@row[3]</td>
+                                        <td>@row[2]</td>
+                                        <td>@row[5]</td>
+                                        <td>@row[12]</td>
+                                        <td>06</td>
+                                        <td><button class="bt-color-active">@row[15]</button></td>
+                                        <td><input type="button" value="More Details" class="btn1" /></td>
+                                    </tr>
+                                    <tr class="t-hidden fm">
+                                        <th>Email_ID</th>
+                                        <td>@row[7]</td>
+                                        <th>Gender</th>
+                                        <td>@row[8]</td>
+                                        <th>Aadhar_No.</th>
+                                        <td>@row[9]</td>
+                                        <th>Quarter Allotment Order No.</th>
+                                        <td>@row[10]</td>
+                                        <th>Order Allotment Date</th>
+                                        <td>@row[11]</td>
+                                        <td><a href="#" class="bg-warning btn btn-warning">Show_Document</a></td>
+
+                                    </tr>
+                                    { i = i + 1; }
+                                }
+
+
+                            </tbody>
+                        </table>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $(".t-hidden").hide()
+        $(".btn1").click(function () {
+            $(".t-hidden").toggle()
+        })
+
+    })
+</script>
+

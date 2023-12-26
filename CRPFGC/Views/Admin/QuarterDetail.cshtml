@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "QuarterDetail";
+    Layout = "~/Views/Shared/adminLayout.cshtml";
+}
+
+<div class="row">
+    <h3 class="pb-3 txtmycolor fw-bold text-center">Quarter Detail</h3>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <!-- No Labels Form -->
+                <form class="row g-3 pt-2" method="post">
+                    <div class="col-md-12">
+                        <label style="margin-bottom:-20px">Quarter No.</label>
+                        <input type="text" class="form-control" name="quarter_no" required placeholder="Enter Quarter No.">
+                    </div>
+                    <div class="col-12">
+                        <label style="margin-bottom:-20px">Quarter Type</label>
+                        <select id="inputState" required name="quarter_sn" class="form-select">
+                            <option value="0">Select Quarter Type</option>
+                            @{
+                                foreach (var row in ViewBag.quarters.Rows)
+                                {
+                                    <option value="@row[0]">@row[1]</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label style="margin-bottom:-20px">Block</label>
+                        <input type="text" class="form-control" name="block" required placeholder="Enter Block">
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary bgmycolor text-light">Add Now</button>
+                    </div>
+                </form><!-- End No Labels Form -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        @{
+            if (ViewBag.data != null)
+            {
+                if (ViewBag.data.Rows.Count > 0)
+                {
+                    <!-- Table with stripped rows -->
+                    <table class="table datatable">
+                        <thead>
+                            <tr>
+                                <th>Sn.</th>
+                                <th>Quarter No.</th>
+                                <th>Quarter Type</th>
+                                <th>Block</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ int i = 1; }
+                            @foreach (var row in ViewBag.data.Rows)
+                            {
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@row[1]</td>
+                                    <td>@row[2]</td>
+                                    <td>@row[3]</td>
+                                    <td>@row[4]</td>
+                                    <td>
+                                        <button class="btn btn-success"><i class="bi bi-pencil"></i></button>
+                                        <button class="btn btn-danger"><a href="/admin/deleteQuarterDetail?sr=@row[0]" class="bi bi-trash text-white"></a></button>
+                                    </td>
+                                </tr>
+                                { i = i + 1; }
+                            }
+
+                        </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                }
+            }
+        }
+    </div>
+</div>
+

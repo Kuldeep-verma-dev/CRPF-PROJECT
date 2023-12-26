@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>@ViewBag.Title</title>
+    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/Content/assets/img/crpflogo.png" rel="icon">
+    <link href="~/Content/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/Content/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <!-- Template Main CSS File -->
+    <link href="~/Content/assets/css/style.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/userLayoutstyle.css" rel="stylesheet" />
+    <!-- =======================================================
+    * Template Name: NiceAdmin
+    * Updated: Nov 17 2023 with Bootstrap v5.3.2
+    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    
+</head>
+<body>
+    <div class="container-fluid header fixed-top">
+        <div class="row">
+            <div class="col-md-6 col-lg-4   d-flex align-items-center justify-content-between lgo">
+
+                <img class="l" src="~/Content/assets/img/crpflogo.png" alt="">
+                <span class=" w-100 txtmycolor fs-5  d-sm-block">Central Reserved Police Force<br /><span class="fs-5 crpfcolor"> केन्द्रीय रिजर्व पुलिस बल</span></span>
+            </div>
+            <div class="col-md-6 col-sm-3 ps-5">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid ps-1">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse ps-3" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/user/requestmanagement">Pay Bill</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Bill Summary</a>
+                                </li>
+                                <li class="nav-item dropdown me-4">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        My Tickets
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="w-100"><a class="dropdown-item" href="#">Apply For Electricity Connection</a></li>
+                                        <li class="w-100"><a class="dropdown-item" href="#">Remove Electricity Connection</a></li>
+
+                                        <li class="w-100"><a class="dropdown-item" href="#">Complaint</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown ps-5 profile ">
+
+                                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                                        <img src="~/Content/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                                        <span class="d-none d-md-block dropdown-toggle ps-2 mb-2">Kuldeep Verma</span>
+                                    </a><!-- End Profile Iamge Icon -->
+
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                                        <li class="dropdown-header">
+                                            <h6>Kuldeep Verma</h6>
+                                            <span>Web Designer</span>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                <i class="bi bi-person"></i>
+                                                <span>My Profile</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                <i class="bi bi-gear"></i>
+                                                <span>Account Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                <i class="bi bi-question-circle"></i>
+                                                <span>Change Password</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="/User/Logout">
+                                                <i class="bi bi-box-arrow-right"></i>
+                                                <span>Sign Out</span>
+                                            </a>
+                                        </li>
+
+                                    </ul><!-- End Profile Dropdown Items -->
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid outer">
+        @RenderBody()
+    </div>
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+</body>
+</html>

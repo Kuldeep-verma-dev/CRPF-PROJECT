@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "RankTypeManagement";
+    Layout = "~/Views/Shared/adminLayout.cshtml";
+}
+<style>
+    .btn-bg {
+        background: #8f6c39;
+    }
+</style>
+<div class="row">
+    <h3 class="pb-3 txtmycolor fw-bold text-center">Rank Type Management</h3>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <!-- No Labels Form -->
+                <form class="row g-3 pt-2" method="post">
+                    <div class="col-md-12">
+                        <label style="margin-bottom:-20px">Select Rank</label>
+                        <select required id="inputState" name="rank_sn" class="form-select">
+                            <option value="0">Select Rank</option>
+                            @{
+                                foreach (var row in ViewBag.rank.Rows)
+                                {
+                                    <option value="@row[0]">@row[1]/@row[2]</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label style="margin-bottom:-20px">Rank Type</label>
+                        <input type="text" required class="form-control" name="rank_type" placeholder="Enter Your Family Line Mangement">
+                    </div>
+                    <div class="col-md-12">
+                        <label style="margin-bottom:-20px">Rank Type Code</label>
+                        <input type="text" required class="form-control" name="rank_typecode" placeholder="Enter Your Water Charge">
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary bgmycolor text-light">Submit</button>
+                    </div>
+                </form><!-- End No Labels Form -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        @{
+            if (ViewBag.data != null)
+            {
+                if (ViewBag.data.Rows.Count > 0)
+                {
+                    <!-- Table with stripped rows -->
+                    <table class="table datatable">
+                        <thead>
+                            <tr>
+                                <th>Sn.</th>
+                                <th>Rank</th>
+                                <th>Rank Type</th>
+                                <th>Rank Type Code</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ int i = 1; }
+                            @foreach (var row in ViewBag.data.Rows)
+                            {
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@row[1]</td>
+                                    <td>@row[2]</td>
+                                    <td>@row[3]</td>
+                                    <td>@row[4]</td>
+                                    <td>
+                                        <button class="btn btn-success"><i class="bi bi-pencil"></i></button>
+                                        <button class="btn btn-danger"><a href="/Admin/deleteRankTypeManagement?sr=@row[0]" class="bi bi-trash text-white"></a></button>
+                                    </td>
+                                </tr>
+                                { i = i + 1; }
+                            }
+
+                        </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                }
+            }
+        }
+
+    </div>
+</div>
+
+

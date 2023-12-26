@@ -1,0 +1,19 @@
+﻿:root {
+    --bg-mycolor: #104e8d;
+    --txt-mycolor: #104e8d;
+}
+
+.bg-mycolor {
+    background: var(--bg-mycolor);
+}
+
+.txt-mycolor {
+    color: var(--txt-mycolor);
+}
+
+.h {
+    color: var(--txt-mycolor);
+    font-weight: bold;
+    font-family: Alexandria;
+    font-size: 29px;
+}

@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewBag.Title = "RequestManagement";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<link href="~/Content/assets/css/requestManagement.css" rel="stylesheet" />
+
+<!--start-->
+<section class="content">
+    <div class="container-fluid my-2 pt-3 px-5">
+        <div class="pb-1 h text-center">Request/Complain Management</div>
+        <div class="row">
+            <div class="col-12">
+                <div class="invoice p-3 mb-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-6 txt-mycolor">
+                                    <h5>
+                                        <b>
+                                            <i class="bi bi-book"></i> BillPayment
+                                        </b>
+                                    </h5>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <h5>
+                                        <small>Date:08/12/2023</small>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row invoice-info py-2">
+                        <div class="col-sm-4 invoice-col">
+                            <address>
+                                <strong>Your Details</strong><br>
+                                Name : MR SATYABHAWAN SHARMA<br>
+                                Mobile NO : +919988987897<br>
+                                Force NO : 20237<br>
+                                Unit/Place Of Posting : Gorakhpur,273001
+                            </address>
+                        </div>
+
+                        <div class="col-sm-4 invoice-col">
+                            <address>
+                                <strong>Quarter Details</strong><br>
+                                Quarter No/Type: Type-2<br>
+                                Starting Date: 02/12/20023<br>
+                                Starting Reading: 123670<br>
+                                Total Leaving (days) :05<br>
+                            </address>
+                        </div>
+
+                        <div class="col-sm-4 invoice-col">
+                            <address>
+                                <strong>Bill Details</strong><br>
+                                BillNO: 040910412731<br />
+                                BILL MONTH/YEAR: Dec-2023<br>
+                                Period(Months): 1<br>
+                                Total Amount: 13091<br>
+                                <button type="button" class="btn bg-mycolor text-light my-2">
+                                    <i class="far fa-credit-card"></i> Pay Now
+                                </button>
+                            </address>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Present <BR />
+                                            Meter Reading
+                                        </th>
+                                        <th>
+                                            Previous<BR>
+                                            Meter Reading
+                                        </th>
+                                        <th>Unit Consumed</th>
+                                        <th>Rate</th>
+                                        <th>Fixed Charged</th>
+                                        <th>Amount</th>
+                                        <th>Watt</th>
+                                        <th>FLM</th>
+                                        <th>Licence Fee</th>
+                                        <th>Tatal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>KWH: 63119.00<br />DT: 04-11-2023</td>
+                                        <td>KWH: 64416.00<br />DT: 07-12-2023</td>
+                                        <td>168</td>
+                                        <td>7.20</td>
+                                        <td>90</td>
+                                        <td>1210</td>
+                                        <td>10</td>
+                                        <td>230</td>
+                                        <td>179</td>
+                                        <td>1540</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <p class="lead">Payment Methods:</p>
+                            <img src="~/content/assets/img/credit/credit/visa.png" alt="Visa">
+                            <img src="~/content/assets/img/credit/credit/mastercard.png" alt="Mastercard">
+                            <img src="~/content/assets/img/credit/credit/american-express.png" alt="American Express">
+                            <img src="~/content/assets/img/credit/credit/paypal2.png" alt="Paypal">
+                            <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+                                Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem
+                                plugg
+                                dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                            </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p class="lead">Amount Due 28/11/2023</p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th style="width:50%">Gross Electricity Bill :<br />(This Month)</th>
+                                        <td>12908.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Previous Due Amount (+):</th>
+                                        <td>940.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Due Charge (+):</th>
+                                        <td>10270.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Late Payment Fee (+):</th>
+                                        <td>210.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Discount (-):</th>
+                                        <td>2.3 %</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total:</th>
+                                        <td>28110.00</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row no-print">
+                        <div class="col-12 text-end">
+                            <button type="button" class="btn bg-mycolor text-light">
+                                <i class="far fa-credit-card"></i> Pay Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

@@ -1,0 +1,190 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Login Form HTML Design</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link href="~/Content/assets1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/assets1/css/style.css" rel="stylesheet" />
+<link href="~/Content/assets1/css/style1.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+
+<style>
+
+    .bg-card {
+        background: rgba(246,249,255);
+    }
+    table thead tr th {
+        font-size: 15px;
+    }
+
+    table tbody tr td {
+        font-size: 14px;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="col-lg-12 mx-auto login-container">
+        <div class="row form-header">
+            <div class="col-md-1 logocol">
+                <img src="/Content/assets1/images/logo-crpf.png" style="height: 80px;">
+            </div>
+            <div class="col-md-10 headcol">
+                <h3>Central Reserve Police Force</h3>
+                <h3 style="color: #bb9867;">केन्द्रीय रिजर्व पुलिस बल</h3>
+            </div>
+            <div class="col-md-1 logocol">
+                <a href="/Technician/Logout" class="btn btn-danger float-end mt-5 px-5 py-3">Logout</a>
+            </div>
+        </div>
+        <div class="form-row row">
+            <div class="row ">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4 mx-auto  card rounded p-4 m-4">
+
+                    <h4 class="text-center mt-2">Add Unit</h4>
+                    <form action="">
+                        <label>Choose Quarter No.</label><br />
+                        <select class="selectpicker border form-control" data-style="btn-light" multiple data-max-options="3" data-live-search="true">
+
+                            <optgroup label="Web">
+
+                                <option>PHP</option>
+
+                                <option>CSS</option>
+
+                                <option>HTML</option>
+
+                                <option>CSS 3</option>
+
+                                <option>Bootstrap</option>
+
+                                <option>JavaScript</option>
+
+                            </optgroup>
+
+                            <optgroup label="Programming">
+
+                                <option>Java</option>
+
+                                <option>C#</option>
+
+                                <option>Python</option>
+
+                            </optgroup>
+
+                        </select>
+
+                        <label for="username" style="margin-bottom:-1px">Add Current Unit</label>
+                        <input type="text" id="username" placeholder="Enter Userid" class="form-control ">
+
+                        <input type="button" style="margin-top:-20px" value="Login Now" class="btn btn1 bgmycolor text-light sptext">
+
+
+                    </form>
+
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5 card txtmycolor bg-card  p-4 my-4">
+                    <h4 class="text-center mt-2">Details</h4>
+                    <div class="p-4">
+
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-sm-5"><b>Name : </b><br /></div>
+                                <div class="col-sm-7"></div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-5"><b>Acquisition Date : </b></div>
+                                <div class="col-sm-7"></div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-5"><b>Last Meter Reading : </b></div>
+                                <div class="col-sm-7"></div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-5"><b>Last Invoices At : </b></div>
+                                <div class="col-sm-7"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-5"><b>Due Balance : </b></div>
+                                <div class="col-sm-7"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="text-center mt-5">This Month Reading Details</h4>
+
+                    <table class="table datatable" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Sn.
+                                </th>
+                                <th>Quarter No.</th>
+                                <th>Name</th>
+                                <th>Previous Reading</th>
+                                <th>Current Reading</th>
+                                <th>Total Unit</th>
+                                <th>Total Due Balance</th>
+                                <th>Reading Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>9853</td>
+                                <td>Nitesh</td>
+                                <td>2002</td>
+                                <td>4002</td>
+                                <td>39</td>
+                                <td>3996</td>
+                                <td>12/23/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>6444</td>
+                                <td>Harshit</td>
+                                <td>2002</td>
+                                <td>4002</td>
+                                <td>39</td>
+                                <td>3996</td>
+                                <td>12/23/2023</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
+<link href="~/Content/assets1/css/style.css" rel="stylesheet" />
+<link href="~/Content/assets1/css/style1.css" rel="stylesheet" />

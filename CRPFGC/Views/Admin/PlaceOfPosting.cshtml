@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Placeofposting";
+    Layout = "~/Views/Shared/adminLayout.cshtml";
+}
+
+<div class="row">
+    <h3 class="pb-3 txtmycolor fw-bold text-center">Unit/ Place Of Posting</h3>
+    <div class="col-sm-4">
+        @if (ViewBag.msg != null)
+        {
+            <div class="alert alert-success">
+                <strong>Success! </strong>@ViewBag.msg
+            </div>
+        }
+        <div class="card">
+            <div class="card-body">
+                <!-- No Labels Form -->
+                <form method="post" class="row g-3 pt-2">
+                    <div class="col-md-12">
+                        <label style="margin-bottom:-20px">Add Unit</label>
+                        <input type="text" required class="form-control" name="unit" placeholder="Enter Unit">
+                    </div>
+                    <div class="col-md-12">
+                        <label style="margin-bottom:-20px">Add Place Of Posting</label>
+                        <input type="text" required class="form-control" name="place_of_posting" placeholder="Enter Place Of Posting">
+                    </div>
+                    <div class="col-md-12">
+                        <label style="margin-bottom:-20px">License Fee</label>
+                        <input type="text" required class="form-control" name="license_fee" placeholder="Enter License Fee">
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-outline-secondary  btn-sm  bgmycolor text-light">Add Now</button>
+                    </div>
+                </form><!-- End No Labels Form -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        @{
+            if (ViewBag.data != null)
+            {
+                if (ViewBag.data.Rows.Count > 0)
+                {
+                    <!-- Table with stripped rows -->
+                    <table class="table datatable">
+                        <thead>
+                            <tr>
+                                <th>Sn.</th>
+                                <th>Unit</th>
+                                <th>Posting Place</th>
+                                <th>Licence Fee</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ int i = 1; }
+                            @foreach (var row in ViewBag.data.Rows)
+                            {
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@row[1]</td>
+                                    <td>@row[2]</td>
+                                    <td>@row[3]</td>
+                                    <td>@row[4]</td>
+                                    <td>
+                                        <button class="btn btn-success"><i class="bi bi-pencil"></i></button>
+                                        <button class="btn btn-danger"><a href="/Admin/deletePlaceOfPosting?sr=@row[0]" class="bi bi-trash text-white"></a></button>
+                                    </td>
+                                </tr>
+                                { i = i + 1; }
+                            }
+
+                        </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                }
+            }
+        }
+
+    </div>
+</div>
+
+

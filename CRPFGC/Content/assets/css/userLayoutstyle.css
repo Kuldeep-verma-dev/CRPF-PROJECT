@@ -1,0 +1,50 @@
+﻿.l {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+:root {
+    --txtmycolor: #104e8d;
+    --bgmycolor: #104e8d;
+    --crpfcolor: #BB9867;
+}
+
+.bgmycolor {
+    background: var(--bgmycolor)
+}
+
+.txtmycolor {
+    color: var(--txtmycolor)
+}
+
+.crpfcolor {
+    color: var(--crpfcolor)
+}
+
+.lgo {
+    line-height: 25px;
+    height: 60px;
+}
+
+th {
+    color: #104e8d;
+}
+
+.outer {
+    min-height: 600px;
+    margin-top: 60px;
+}
+
+li {
+    width: 150px;
+}
+
+.profile img {
+    height: 40px;
+    margin-top: -5px;
+}
+
+.profile {
+    margin-left: 50px;
+}

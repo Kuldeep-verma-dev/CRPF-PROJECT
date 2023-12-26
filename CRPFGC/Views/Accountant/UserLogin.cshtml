@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Login Form HTML Design</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link href="~/Content/assets1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/assets1/css/style.css" rel="stylesheet" />
+<link href="~/Content/assets1/css/style1.css" rel="stylesheet" />
+
+
+
+<div class="container-fluid">
+    <div class="col-lg-12 mx-auto login-container">
+        <div class="row form-header">
+            <div class="col-md-1 logocol">
+                <img src="/Content/assets1/images/logo-crpf.png" style="height: 90px;">
+            </div>
+            <div class="col-md-10 headcol">
+                <h3>Central Reserve Police Force</h3>
+                <h3 style="color: #bb9867;">केन्द्रीय रिजर्व पुलिस बल</h3>
+            </div>
+        </div>
+
+        <div class="form-row row mt-5">
+                <div class="col-sm-4  mx-auto border border-2 rounded p-4 m-5 ">
+                    <h4 class="text-center mt-2">Employee Login</h4>
+                    <form method="post">
+                        <label for="mobile" style="margin-bottom:-5px">Mobile No (self):</label>
+                        <input type="number" required name="mobile" placeholder="Enter mobile Number" class="form-control mt-2">
+                        <input type="button" style="margin-top:-25px" value="Get otp" class="btn btn1 bgmycolor  btn-sm  text-light sptext d-inline-block">
+                        <input type="button" value="Resend otp" style="margin-top:-25px" class="btn btn1 bgmycolor  btn-sm  text-light float-end sptext "> <br>
+                        <span class="message text-success sptext d-block" style="margin-top:-25px"> Otp sent to your email id and mobile no </span><br>
+                        <label for="mobile" style="margin-bottom: -5px; margin-top: -10px;">Enter 4-digit OTP:</label>
+                        <input type="number" placeholder="Enter 4-digit OTP" class="form-control mt-2">
+                        <input type="submit" style="margin-top:-25px" value="Login Now" class="btn btn1 bgmycolor text-light sptext">
+
+                    </form>
+
+                </div>
+        </div>
+    </div>
+</div>
+
+

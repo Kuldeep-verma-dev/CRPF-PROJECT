@@ -1,0 +1,49 @@
+﻿:root {
+    --txtmycolor: #104e8d;
+    --bgmycolor: #104e8d;
+    --crpfcolor: #BB9867;
+}
+
+.bgmycolor {
+    background: var(--bgmycolor)
+}
+
+.txtmycolor {
+    color: var(--txtmycolor)
+}
+
+.crpfcolor {
+    color: var(--crpfcolor)
+}
+
+.fm {
+    font-family: alexzandria;
+    font-size: 15px;
+    text-align: center
+}
+
+td {
+    font-size: 14px;
+    text-align: center
+}
+
+.bt-color-active {
+    background: green;
+    border-radius: 2px;
+    border: none;
+    color: white;
+}
+
+.bt-color-block {
+    background: red;
+    border-radius: 2px;
+    border: none;
+    color: white;
+}
+
+.bt-color-new {
+    background: darkblue;
+    border-radius: 2px;
+    border: none;
+    color: white;
+}
